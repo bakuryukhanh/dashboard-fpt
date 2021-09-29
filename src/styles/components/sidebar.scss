@@ -1,0 +1,45 @@
+@use "../utils" as *;
+
+.side-bar {
+  width: var(--side-width);
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  height: 100vh;
+  background: white;
+  .top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 3px solid var(--grey);
+    .logo-container {
+      height: 50px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & img {
+        object-fit: contain;
+      }
+    }
+    .name {
+      font-weight: 600;
+    }
+  }
+  .links-container {
+    .link {
+      display: block;
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+    .active {
+      background: var(--orange);
+      color: white;
+    }
+  }
+}

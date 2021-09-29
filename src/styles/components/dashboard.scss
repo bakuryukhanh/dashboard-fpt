@@ -1,0 +1,103 @@
+@use "../utils" as *;
+.dashboard {
+  padding: 10px;
+  background: white;
+  .top {
+    margin-bottom: 20px;
+  }
+  .body {
+    border: 2px solid var(--grey);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    .chart {
+      padding: 10px;
+      border-right: 2px solid var(--grey);
+      .card-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rem(20);
+      }
+      .chart-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        .chart--wrapper {
+          background: white;
+          border-radius: 5px;
+          width: 100%;
+          overflow: hidden;
+          box-shadow: var(--soft-shadow);
+          & h4 {
+            border-bottom: 2px solid var(--grey);
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.db--card {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: var(--soft-shadow);
+  min-width: rem(200);
+  &--top {
+    color: white;
+    background: var(--orange);
+    padding: 5px 10px;
+    & h4 {
+      color: white;
+      text-transform: uppercase;
+    }
+    & p {
+      font-size: rem(13);
+      margin-bottom: 0;
+    }
+  }
+  &--bot {
+    display: flex;
+  }
+  &--value {
+    padding: 0;
+    font-size: rem(24);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    & p {
+      margin: 0;
+    }
+    & + & {
+      border-left: 2px solid var(--grey);
+    }
+  }
+  &--badge {
+    position: absolute;
+    font-size: rem(16);
+    color: white;
+    top: 0;
+    padding-bottom: 10px;
+    width: rem(25);
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 50% 100%, 0 70%);
+  }
+}
+
+.filter--container {
+  display: flex;
+  height: min-content;
+  position: sticky;
+  top: 60px;
+  z-index: 2;
+}
+.map--container {
+  max-height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}

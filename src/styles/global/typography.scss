@@ -1,0 +1,46 @@
+@use "../utils" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: rem(24);
+  margin-bottom: rem(3);
+  @include breakpoint(large) {
+    font-size: rem(28);
+  }
+}
+
+h2 {
+  font-size: rem(24);
+  margin-bottom: rem(24);
+  // font-weight: 700;
+}
+h3 {
+  font-size: rem(32);
+  line-height: rem(36);
+  text-align: center;
+  margin-bottom: rem(5);
+  // font-weight: 700;
+}
+h4 {
+  font-size: rem(18);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: rem(5);
+}
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
