@@ -6,6 +6,7 @@
     margin-bottom: 20px;
   }
   .body {
+    background: #bed0e3;
     border: 2px solid var(--grey);
     padding: 10px;
     display: grid;
@@ -18,13 +19,14 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: rem(20);
+        background: transparent;
       }
       .chart-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         .chart--wrapper {
-          background: white;
+          background: #eff5ff;
           border-radius: 5px;
           width: 100%;
           overflow: hidden;
@@ -60,6 +62,7 @@
   }
   &--bot {
     display: flex;
+    background: white;
   }
   &--value {
     padding: 0;

@@ -54,6 +54,9 @@ const accuracyChartOptions = {
     curve: "straight",
     dashArray: [0, 0],
   },
+  markers: {
+    size: 3,
+  },
 };
 
 const accuracyChartSeries = [
@@ -84,6 +87,17 @@ const deviceChartOptions = {
     width: [3, 3],
     curve: "straight",
     dashArray: [0, 3],
+  },
+  markers: {
+    size: 3,
+  },
+  dataLabels: {
+    enabled: true,
+    offsetX: 0,
+    offsetY: 7,
+  },
+  labels: {
+    hideOverlappingLabels: true,
   },
 };
 
@@ -279,7 +293,11 @@ function Dashboard() {
             </div>
             <div className="chart--wrapper">
               <h4 className="chart--title">Danh sách thiết bị</h4>
-              <Table dataSource={data} columns={columnShape} />
+              <Table
+                dataSource={data}
+                columns={columnShape}
+                style={{ height: "400px", overflow: "scroll" }}
+              />
             </div>
           </div>
         </div>
